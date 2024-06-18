@@ -1,0 +1,9 @@
+<p>autocompletado works!</p>
+<div class="example-container">
+    <div *ngFor="let sentence of sentences; let i = index">
+      <div cdkDropList [cdkDropListData]="answers" class="example-list" (cdkDropListDropped)="drop($event, i)">
+        <div class="example-box" *ngFor="let answer of answers" cdkDrag>{{ answer }}</div>
+      </div>
+      <span [innerHTML]="sentence"></span>
+    </div>
+  </div>
